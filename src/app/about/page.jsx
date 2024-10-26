@@ -32,10 +32,10 @@ function AboutPage() {
       {/* Container */}
       <div className="lg:flex" ref={targetRef}>
         {/* Text container */}
-        <div className="p-4 sm:p-8 md:p-12 lg:p-24 xl:p-48 flex flex-col gap-20 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
-          <div className="flex flex-col gap-y-12">
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
-            <p className="p-4 md:text-md rounded-md shadow-xl">
+        <div className="p-4  sm:p-8 md:p-12 lg:p-24 xl:p-48 flex flex-col gap-20 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
+          <div className="flex flex-col gap-y-12 ">
+            <h1 className="font-body font-extrabold text-2xl">BIOGRAPHY</h1>
+            <p className="p-4 border border-black font-caveat md:text-md rounded-md shadow-xl">
               I like to code as much as I like to watch a good movie on a late
               night of a weekend. Sounds fun right? Oh, web dev? I am learning
               it as a hobby for sometime now and it amazes me that how much
@@ -43,10 +43,10 @@ function AboutPage() {
               new things. Anyways, explore rest of the site. See ya!
             </p>
 
-            <span className="font-semibold italic">
-              "I am programmer and I have no life."
-              <span className="font-normal not-italic ml-2 text-gray-500">
-                — Muhammad Arbaz Uddin
+            <span className="font-semibold italic capitalize">
+              I don’t stop when I’m tired, I stop when I’m done.
+              <span className="font-normal not-italic ml-2 text-gray-500 ">
+                — David Goggins
               </span>
             </span>
 
@@ -68,7 +68,7 @@ function AboutPage() {
               initial={{ x: "-400px" }}
               animate={skillRefInView ? { x: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="font-bold text-2xl"
+              className="font-body font-extrabold text-2xl"
             >
               SKILL LIST
             </motion.h1>
@@ -80,7 +80,11 @@ function AboutPage() {
               {skillList.map((skill, idx) => (
                 <div
                   key={idx}
-                  className="p-2 rounded bg-stone-900 text-zinc-50 cursor-pointer hover:bg-white hover:text-black hover:border border-black transition-all"
+                  className="
+    p-2 rounded 
+    bg-black text-white cursor-pointer 
+    transition duration-300 ease-in-out 
+    border border-transparent hover:scale-105 hover:bg-white hover:text-black hover:border-black"
                 >
                   {skill}
                 </div>

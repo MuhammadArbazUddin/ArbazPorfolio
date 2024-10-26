@@ -9,45 +9,46 @@ function PortfolioPage() {
   const projects = [
     {
       id: 1,
-      title: "WatchHUB",
+      title: "Tapoos",
       image: "/watch_hub.png",
-      liveLink: "https://watch-hub.netlify.app/",
-      codeLink: "https://github.com/SucksToBeAnik/movie-hub-REACT",
+      liveLink: "https://zorka-clone.vercel.app/",
+      codeLink: "https://github.com/MTalhashah/Zorka-clone",
     },
     {
       id: 2,
-      title: "Art & Craft Eshop Frontend",
+      title: "Iphone15 Pro Clone",
       image: "/art_n_craft_frontend.png",
-      liveLink: "https://art-craft-eshop-frontend.vercel.app/",
-      codeLink: "https://github.com/SucksToBeAnik/art-craft-eshop-frontend",
+      liveLink: "https://iphonebyarbaz.vercel.app",
+      codeLink: "https://github.com/MuhammadArbazUddin/iphone15pro-clone",
     },
     {
       id: 3,
-      title: "React PIZZA",
+      title: "Brainwave",
       image: "/react_pizza.png",
-      liveLink: "https://fast-react-pizza-theta-rouge.vercel.app/",
-      codeLink: "https://github.com/SucksToBeAnik/fast-react-pizza-REACT",
+      liveLink: "https://brainwavebyarbaz.vercel.app/",
+      codeLink: "https://github.com/MuhammadArbazUddin/Brainwave",
     },
     {
       id: 4,
-      title: "Task Manager API",
-      image: "/task_manager_api.png",
-      liveLink: "https://task-manager-backend-fastapi.onrender.com",
-      codeLink: "https://github.com/SucksToBeAnik/task-manager-backend-FastAPI",
+      title: "GPT-3",
+      image: "/blog_api.png",
+      liveLink: "https://arbaz-gpt-3.vercel.app/",
+      codeLink:
+        "https://github.com/MuhammadArbazUddin/GPT-3-OpenAI-LandingPage",
     },
     {
       id: 5,
-      title: "Art & Craft Eshop Backend",
+      title: "Sundown Studio Clone",
       image: "/art_n_craft_backend.png",
-      liveLink: "https://art-craft-eshop-backend.onrender.com/docs",
-      codeLink: "https://github.com/SucksToBeAnik/art-craft-eshop-backend",
+      liveLink: "https://sundown-studio-clone-delta.vercel.app/",
+      codeLink: "https://github.com/MuhammadArbazUddin/SundownStudio-clone",
     },
     {
       id: 6,
-      title: "Markdown BLOG",
+      title: "Awwward Loader",
       image: "/markdown_blog.png",
-      liveLink: "https://md-blog-basic.netlify.app/",
-      codeLink: "https://github.com/SucksToBeAnik/markdown-blog-REACT",
+      liveLink: "https://loader-theta.vercel.app/",
+      codeLink: "https://github.com/MuhammadArbazUddin/Loader",
     },
   ];
   const ref = useRef(null);
@@ -56,13 +57,13 @@ function PortfolioPage() {
   return (
     <PageTransitionProvider>
       <div className="h-[calc(800vh-6rem)] relative" ref={ref}>
-        <div className="min-h-screen min-w-screen flex items-center justify-center text-4xl md:text-5xl lg:text-8xl text-center text-stone-900 tracking-wider ">
+        <div className="min-h-screen min-w-screen flex items-center justify-center text-4xl md:text-5xl lg:text-8xl text-center text-black font-extrabold leading-tight font-body ">
           MY PROJECTS
         </div>
 
         <div className="flex h-screen sticky top-0 overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="w-screen h-screen bg-gray-50"></div>
+            <div className="w-screen h-screen bg-gray-50 "></div>
 
             {projects.map((project) => {
               return <Project key={project.id} project={project} />;
