@@ -19,10 +19,10 @@ function ContactPage() {
     toast.loading("Sending your message...");
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        "service_7z11hig", // Replace with your actual Service ID
+        "template_lj0sov8", // Replace with your actual Template ID
         formRef.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        "UkXTBAR_USdv5oZi-" // Replace with your actual Public Key
       )
       .then(
         () => {
