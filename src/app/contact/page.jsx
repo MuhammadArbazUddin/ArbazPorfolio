@@ -17,7 +17,6 @@ function ContactPage() {
     setSuccess(false);
 
     toast.loading("Sending your message...");
-
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -29,11 +28,12 @@ function ContactPage() {
         () => {
           setSuccess(true);
           formRef.current.reset();
-          toast.dismiss(); // dismiss the loading toast
+          toast.dismiss();
           toast.success("Your message has been sent successfully!");
         },
-        () => {
-          toast.dismiss(); // dismiss the loading toast
+        (error) => {
+          console.error("EmailJS error:", error); // Log any specific errors here
+          toast.dismiss();
           toast.error("Something went wrong! Please try again.");
         }
       );
