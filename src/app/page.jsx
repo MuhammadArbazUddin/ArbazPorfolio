@@ -26,9 +26,9 @@ const Homepage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.1 }}
           >
-            Hello there! Over here! I'm Arbaz, a frontend developer with years
-            of experience—just enough to know that debugging is the true test of
-            patience. Thanks for checking out my work!
+            Hello there! Over here! I&apos;m Arbaz, a frontend developer with
+            years of experience—just enough to know that debugging is the true
+            test of patience. Thanks for checking out my work!
           </motion.p>
 
           {/* Animated Buttons */}

@@ -9,13 +9,11 @@ import { toast } from "react-hot-toast";
 function ContactPage() {
   const text = "Leave a Message!";
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
 
   const formRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setError(false);
     setSuccess(false);
 
     toast.loading("Sending your message...");
@@ -34,8 +32,7 @@ function ContactPage() {
           toast.dismiss(); // dismiss the loading toast
           toast.success("Your message has been sent successfully!");
         },
-        (error) => {
-          setError(true);
+        () => {
           toast.dismiss(); // dismiss the loading toast
           toast.error("Something went wrong! Please try again.");
         }
@@ -47,23 +44,21 @@ function ContactPage() {
       <div className="flex flex-col lg:flex-row px-6 sm:px-10 md:px-16 lg:px-24 xl:px-56 gap-8 my-10 lg:my-0">
         <div className="h-1/2 lg:min-h-[calc(100vh-6rem)] lg:w-1/2 flex justify-center items-center">
           <div className="text-4xl md:text-6xl text-black font-semibold">
-            {text.split("").map((letter, idx) => {
-              return (
-                <motion.span
-                  key={idx}
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 0 }}
-                  transition={{
-                    duration: 3,
-                    delay: idx * 0.1,
-                    repeat: Infinity,
-                  }}
-                  className="hover:scale-110 transition-transform duration-200"
-                >
-                  {letter}
-                </motion.span>
-              );
-            })}
+            {text.split("").map((letter, idx) => (
+              <motion.span
+                key={idx}
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 0 }}
+                transition={{
+                  duration: 3,
+                  delay: idx * 0.1,
+                  repeat: Infinity,
+                }}
+                className="hover:scale-110 transition-transform duration-200"
+              >
+                {letter}
+              </motion.span>
+            ))}
           </div>
         </div>
         <form
@@ -98,11 +93,6 @@ function ContactPage() {
           {success && (
             <span className="text-sm text-green-500 font-semibold mt-4">
               Your message has been sent successfully!
-            </span>
-          )}
-          {error && (
-            <span className="text-sm text-red-500 font-semibold mt-4">
-              Something went wrong! Please try again.
             </span>
           )}
         </form>
