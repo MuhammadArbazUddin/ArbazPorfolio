@@ -19,7 +19,7 @@ function ContactPage() {
     toast.loading("Sending your message...");
     emailjs
       .sendForm(
-        "service_7z11hig", // Replace with your actual Service ID
+        "service_7z11hig",
         "template_lj0sov8", // Replace with your actual Template ID
         formRef.current,
         "UkXTBAR_USdv5oZi-" // Replace with your actual Public Key
